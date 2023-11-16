@@ -1,5 +1,13 @@
-<script setup></script>
+<script setup>
+const hola = "Hola Mundo";
+</script>
 
-<template></template>
+<template>
+  <h1>{{ hola }}</h1>
+</template>
 
-<style scoped></style>
+<style scoped>
+h1 {
+  text-transform: uppercase;
+}
+</style>
