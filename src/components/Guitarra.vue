@@ -1,8 +1,4 @@
 <script setup>
-import { ref } from "vue";
-
-const numero = ref(0);
-
 const props = defineProps({
   guitarra: {
     type: Object,
@@ -26,7 +22,6 @@ defineEmits(["agregar-carrito"]);
       <h3 class="text-black fs-4 fw-bold text-uppercase">
         {{ guitarra.nombre }}
       </h3>
-      <p>{{ numero }}</p>
       <p>
         {{ guitarra.descripcion }}
       </p>
@@ -34,7 +29,7 @@ defineEmits(["agregar-carrito"]);
       <button
         type="button"
         class="btn btn-dark w-100"
-        @click="$emit('agregarCarrito')"
+        @click="$emit('agregarCarrito', { guitarra })"
       >
         Agregar al Carrito
       </button>
